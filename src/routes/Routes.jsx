@@ -11,6 +11,7 @@ import ShoppingCart from "../pages/ShoppingCart";
 import Checkout from "../pages/Checkout";
 import Profile from "../pages/Profile";
 import SellingMadeSimple from "../pages/SellingMadeSimple";
+import NewArrival from "../pages/NewArrival";
 
 const routes = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ const routes = createBrowserRouter([
       {
         index: true,
         path: "/new-arrival",
-        element: <AboutUs />,
+        element: <NewArrival />,
       },
       {
         index: true,
