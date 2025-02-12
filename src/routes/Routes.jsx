@@ -49,7 +49,7 @@ const routes = createBrowserRouter([
       },
       {
         index: true,
-        path: "/product-details",
+        path: "/product-details/:id",
         element: <ProductDetails />,
       },
       {
