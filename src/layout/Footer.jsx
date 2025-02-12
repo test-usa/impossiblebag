@@ -8,8 +8,8 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import visa from "../assets/images/visa.png";
-import master from "../assets";
-import paypal from "../assets/image/paypal.png";
+import master from "../assets/images/master.png";
+import paypal from "../assets/images/paypal.png";
 
 const Footer = () => {
   return (
