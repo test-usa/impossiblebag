@@ -1,3 +1,8 @@
+import { Divider } from "@heroui/react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { Icons } from "@/assets/icons/Icons";
 import footerLogo from "../assets/images/footerLogo.png";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
