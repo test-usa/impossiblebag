@@ -1,12 +1,28 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
 
 
-const CommonHeader = ({children, Class}) => {
+const CommonHeader = ({ title, heading }) => {
   return (
-    <h2 className={` text-[22px] ${Class}`}>
-      {children}
-    </h2>
+    <div className="h-[437px] flex items-center justify-center bg-custom-gradient text-center px-4 ">
+  <div className="max-w-lg w-full text-[#050505]">
+    <h1 className="text-7xl font-bold">{heading}</h1>
+    <p className="text-[#050505] mt-2 text-lg">
+      <span className="">Home</span> / {title}
+    </p>
+  </div>
+</div>
   )
 }
 
 export default CommonHeader
+
+
+
+
+
+
+
+
+
