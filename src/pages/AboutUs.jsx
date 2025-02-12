@@ -50,9 +50,3 @@ const AboutUs = () => {
 
 export default AboutUs
 
-
-// width: 288px;
-// height: 255px;
-// flex-shrink: 0;
-// border-radius: 16px;
-// background: #F8DAB0;
