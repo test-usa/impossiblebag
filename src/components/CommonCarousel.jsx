@@ -53,7 +53,8 @@ const CommonCarousel = () => {
               <div className="relative flex flex-col items-center">
                 {/* Background Large Text */}
                 <div className="absolute top-[30rem] w-full text-[70px] md:text-[120px] lg:text-[150px] font-extrabold leading-[132%] tracking-[-1.5px] text-white opacity-40 uppercase z-0 text-center lg:text-right">
-                  T<span className="pl-[5px] md:pl-[15px]">HE</span> IMPOSSIBLE BAGS
+                  T<span className="pl-[5px] md:pl-[15px]">HE</span> IMPOSSIBLE
+                  BAGS
                 </div>
 
                 {/* Main Image */}
@@ -79,12 +80,16 @@ const CommonCarousel = () => {
                   </div>
 
                   <div>
-                    <img src={MenImg} alt="Bag" className="w-[100px] md:w-[140px] h-auto" />
+                    <img
+                      src={MenImg}
+                      alt="Bag"
+                      className="w-[100px] md:w-[140px] h-auto"
+                    />
                   </div>
                 </div>
 
                 {/* Navigation Buttons */}
-                <div className="absolute top-5 right-5 flex gap-2 z-20">
+                <div className="absolute top-5 lg:right-14 right-5 flex gap-2 z-20">
                   <button className="swiper-button-prev w-10 h-10 flex items-center justify-center rounded-full bg-black text-white shadow-md transition-all hover:bg-gray-800">
                     <ArrowLeft size={20} />
                   </button>
