@@ -43,4 +43,4 @@ const SearchInput = ({setSearchInput}) => {
   )
 }
 
-export default SearchInput
+export default SearchInput;

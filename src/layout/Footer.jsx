@@ -1,4 +1,3 @@
-import { Divider } from "@heroui/react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
@@ -18,7 +17,7 @@ const Footer = () => {
         <div className="w-[204px] h-[127px]">
           <img src={footerLogo} alt="" />
         </div>
-        <div className="flex item-center gap-10 pl-5 pt-3">
+        <div className="flex gap-10 pt-3 pl-5 item-center">
           <div className="w-[24px] h-[24px]">
             <FaInstagramSquare />
           </div>
