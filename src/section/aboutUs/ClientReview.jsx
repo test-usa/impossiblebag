@@ -1,102 +1,104 @@
 import { useState } from "react";
+import Slider from "react-slick";
 import { Card, CardContent } from "@/components/ui/card";
-// import { Button } from "@/components/ui/button";
-import { Button, ButtonGroup } from "@heroui/button";
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { divider } from "@heroui/theme";
 
-import React from "react";
-const slides = [1, 2, 3, 4, 5, 6, 7];
 const ClientReview = () => {
-  const [activeButton, setActiveButton] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [slider, setSlider] = useState(null);
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const handleButtonClick = (button) => {
-    setActiveButton(button);
-    // Add your button navigation logic here
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="p-8 pt-20 w-[1880px] ml-48">
+    <div className="p-8 pt-20 max-w-[1880px] mx-auto">
       {/* Testimonials Section */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-bold">Hear from Our Satisfied Clients</h2>
-        <p className="text-gray-500">
-          Here is what some of our Clients have to say about their Experience of
+        <h2 className="text-2xl font-bold text-center md:text-left">
+          Hear from Our Satisfied Clients
+        </h2>
+        <p className="text-gray-500 text-center md:text-left">
+          Here is what some of our Clients have to say about their experience
           working with us.
         </p>
 
-        {/* Testimonials Cards */}
-        <div className="grid grid-cols-3 gap-4 w-full">
-          {[1, 2, 3].map((_, i) => (
-            <Card key={i} className="p-6 bg-custom-gradient">
-              <CardContent>
-                <div className="flex items-center gap-2 text-yellow-500 text-xl">
-                  ★★★★★
-                </div>
-                <p className="mt-2 text-gray-600">
-                  Potter Ipsum Wand Elf Parchment Wingardium. Patronum Beaters
-                  Stand Butter Wheels Squashy Owl.
-                </p>
-                <div className="flex items-center mt-4 gap-2">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" // Replace with actual avatar image
-                    alt="Client"
-                    className="w-10 h-10 rounded-full"
-                  />
-                  <div>
-                    <p className="font-semibold">Emmett Torphy</p>
-                    <p className="text-gray-500 text-sm">
-                      Direct Operations Producer
-                    </p>
+        {/* Testimonials Carousel */}
+        <div className="w-[1529px] relative gap-x-10 left-20 mx-auto">
+          <Slider ref={(c) => setSlider(c)} {...settings}>
+            {[1, 2, 3, 4, 5].map((_, i) => (
+            <div className="flex gap-x-20">
+                <Card
+                key={i}
+                className="w-[622px] h-[336px] p-6 bg-custom-gradient mx-2 "
+              >
+                <CardContent>
+                  <div className="flex items-center justify-center gap-2 text-yellow-500 text-xl">
+                    ★★★★★
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                  <p className="mt-2 text-gray-600">
+                    Potter Ipsum Wand Elf Parchment Wingardium. Patronum Beaters
+                    Stand Butter Wheels Squashy Owl.
+                  </p>
+                  <div className="flex items-center mt-4 gap-2">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                      alt="Client"
+                      className="w-10 h-10 rounded-full"
+                    />
+                    <div>
+                      <p className="font-semibold">Emmett Torphy</p>
+                      <p className="text-gray-500 text-sm">
+                        Direct Operations Producer
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            ))}
+          </Slider>
         </div>
+      </div>
 
-        <div className=" flex justify-center gap-2 z-20">
-          <button
-            onClick={prevSlide}
-            className="w-14 h-14 flex items-center justify-center rounded-[16px] bg-white text-black border-1 border-[#141414] hover:bg-black hover:text-white"
-          >
-            <ArrowLeft size={20} />
-          </button>
-          <button
-            onClick={nextSlide}
-            variant="ghost"
-            className="w-14 h-14 flex items-center justify-center rounded-[16px] bg-white text-black border-1 border-[#141414] hover:bg-black hover:text-white"
-          >
-            <ArrowRight size={20} />
-          </button>
-        </div>
-        {/* Navigation Buttons */}
-        {/* <div className="flex justify-end gap-2 mt-6">
-                    <Button
-                        variant="outline"
-                        onClick={() => handleButtonClick("prev")}
-                        className={`${activeButton === "prev" ? "bg-black text-white" : "bg-white text-black"
-                            }`}
-                    >
-                        <ArrowLeft size={18} />
-                    </Button>
-                    <Button
-                        variant="outline"
-                        onClick={() => handleButtonClick("next")}
-                        className={`${activeButton === "next" ? "bg-black text-white" : "bg-white text-black"
-                            }`}
-                    >
-                        <ArrowRight size={18} />
-                    </Button>
-                </div> */}
+      {/* Navigation Buttons */}
+      <div className=" top-1/2 left-0 transform -translate-y-1/2 z-10">
+        <button
+          onClick={() => slider?.slickPrev()}
+          className="w-14 h-14 flex items-center justify-center rounded-[16px] bg-white text-black border border-[#141414] hover:bg-black hover:text-white"
+        >
+          <ArrowLeft size={20} />
+        </button>
+      </div>
+      <div className=" top-1/2 right-0 transform -translate-y-1/2 z-10">
+        <button
+          onClick={() => slider?.slickNext()}
+          className="w-14 h-14 flex items-center justify-center rounded-[16px] bg-white text-black border border-[#141414] hover:bg-black hover:text-white"
+        >
+          <ArrowRight size={20} />
+        </button>
       </div>
     </div>
   );
