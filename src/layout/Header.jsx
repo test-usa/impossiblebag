@@ -2,9 +2,6 @@ import {
   Navbar,
   NavbarBrand,
   NavbarContent,
-  NavbarItem,
-  Link,
-  Input,
   DropdownItem,
   DropdownTrigger,
   Dropdown,
@@ -19,7 +16,7 @@ import headerLogo from "../assets/images/headerLogo.png";
 export default function Header() {
   return (
     <Navbar
-      className="pt-5 px-10"
+      className="px-10 pt-5"
       // style={{
       //   background:
       //     "linear-gradient(98deg, #F1FBFF 0%, #F1EDEB 49.68%, #F8DAB0 95.53%)",
@@ -31,7 +28,7 @@ export default function Header() {
             <FaAlignJustify />
           </DropdownTrigger>
           <DropdownMenu aria-label="Profile Actions" variant="flat">
-            <DropdownItem key="profile" className="h-14 gap-2">
+            <DropdownItem key="profile" className="gap-2 h-14">
               <p className="font-semibold">Signed in as</p>
               <p className="font-semibold">zoey@example.com</p>
             </DropdownItem>
