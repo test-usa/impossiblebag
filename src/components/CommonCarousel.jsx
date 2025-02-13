@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 
 const CommonCarousel = () => {
   return (
-    <div className="relative w-full mx-auto rounded-[20px] p-10 flex items-center justify-center overflow-hidden">
+    <div className="relative w-full mx-auto rounded-[20px] p-10 flex items-center justify-center overflow-hidden py-20">
       <Swiper
         modules={[Navigation]}
         slidesPerView={1}
@@ -26,7 +26,7 @@ const CommonCarousel = () => {
             key={index}
             className="flex flex-col lg:flex-row items-center gap-10"
           >
-            <div className="h-[611px] w-full mx-auto bg-[#F8DAB0] rounded-[50px] p-10 flex flex-col lg:flex-row items-center gap-10">
+            <div className="h-[611px] mx-auto bg-[#F8DAB0] rounded-[50px] p-10 flex flex-col lg:flex-row items-center gap-10">
               <div className="w-full lg:w-[400px] text-center lg:text-left">
                 <h2 className="text-[30px] md:text-[40px] font-bold text-black">
                   Subscribe our newsletter
@@ -52,7 +52,7 @@ const CommonCarousel = () => {
               {/* Right Side - Image and Details */}
               <div className="relative flex flex-col items-center">
                 {/* Background Large Text */}
-                <div className="absolute top-[30rem] w-full text-[70px] md:text-[120px] lg:text-[150px] font-extrabold leading-[132%] tracking-[-1.5px] text-white opacity-40 uppercase z-0 text-center lg:text-right">
+                <div className="absolute top-[15rem] w-full text-[70px] md:text-[120px] lg:text-[150px] font-extrabold leading-[132%] tracking-[-1.5px] text-white opacity-40 uppercase z-0 text-center lg:text-right">
                   T<span className="pl-[5px] md:pl-[15px]">HE</span> IMPOSSIBLE
                   BAGS
                 </div>
@@ -90,10 +90,10 @@ const CommonCarousel = () => {
 
                 {/* Navigation Buttons */}
                 <div className="absolute top-5 lg:right-14 right-5 flex gap-2 z-20">
-                  <button className="swiper-button-prev w-10 h-10 flex items-center justify-center rounded-full bg-black text-white shadow-md transition-all hover:bg-gray-800">
+                  <button className="swiper-button-prev w-10 h-10 flex items-center justify-center rounded-full bg-white text-white shadow-md transition-all hover:bg-gray-800">
                     <ArrowLeft size={20} />
                   </button>
-                  <button className="swiper-button-next w-10 h-10 flex items-center justify-center rounded-full bg-black text-white shadow-md transition-all hover:bg-gray-800">
+                  <button className="swiper-button-next w-10 h-10 flex items-center justify-center rounded-full bg-white text-white shadow-md transition-all hover:bg-gray-800">
                     <ArrowRight size={20} />
                   </button>
                 </div>
