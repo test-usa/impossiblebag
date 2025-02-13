@@ -1,9 +1,9 @@
 import React from "react";
 
-const Color = ({ color }) => {
+const Color = ({ Bg, Ring }) => {
   return (
-    <div className={`p-1 rounded-full ring-1 ring-${color} w-max`}>
-      <div className={`w-6 h-6 bg-${color} rounded-full`} />
+    <div className={`p-1 rounded-full ring-1  w-max ${Ring} cursor-pointer`}>
+      <div className={`w-4 h-4 ${Bg}  rounded-full`} />
     </div>
   );
 };
