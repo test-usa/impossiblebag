@@ -5,6 +5,7 @@ import CommonWrapper from "../components/CommonWrapper";
 import CommonCarousel from "../components/CommonCarousel";
 import { StaticCard } from "../section/aboutUs/StaticCard";
 import CommonExclusiveCard from "../components/CommonExclusiveCard";
+import NewsLetter from "../components/NewsLetter";
 
 const AboutUs = () => {
   return (
@@ -14,7 +15,7 @@ const AboutUs = () => {
       <CommonExclusiveCard />
 
       <CommonWrapper>
-        <CommonCarousel />
+        <NewsLetter/>
       </CommonWrapper>
     </div>
   );
