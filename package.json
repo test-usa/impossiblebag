@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroui/button": "^2.2.10",
     "@heroui/checkbox": "^2.3.9",
     "@heroui/modal": "^2.2.8",
     "@heroui/navbar": "^2.2.9",
     "@heroui/pagination": "^2.2.9",
+    "@heroui/react": "^2.6.14",
     "@heroui/system": "^2.4.7",
     "@heroui/table": "^2.2.9",
     "@heroui/theme": "^2.4.6",
@@ -49,7 +51,9 @@
     "react-slick": "^0.30.3",
     "react-toastify": "^11.0.3",
     "slick-carousel": "^1.8.1",
+    "slick-slider": "^1.8.2",
     "sort-by": "^1.2.0",
+    "swiper": "^11.2.2",
     "swr": "^2.3.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7"

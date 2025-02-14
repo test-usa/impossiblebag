@@ -19,8 +19,18 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
+    
     },
     extend: {
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(98deg, #F1FBFF 0%, #F1EDEB 49.68%, #F8DAB0 95.53%)',
+      },
+      fontFamily:{
+        "Poppins":["Poppins","serif"],
+        "Geist":["Geist","serif"]
+      },
+      
+      
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
