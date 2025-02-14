@@ -1,37 +1,11 @@
 import React from "react";
-
-// import { useForm } from "react-hook-form";
-// import axios from "axios";
-// import { useState } from "react";
-// import { Input } from "@/components/ui/input";
-// import { Textarea } from "@/components/ui/textarea";
-// import { Card, CardContent } from "@/components/ui/card";
-
-// import { GoArrowUpRight } from "react-icons/go";
 import CommonHeader from "../components/CommonHeader";
 
 const Contact = () => {
-  // const { register, handleSubmit, reset } = useForm();
-  // const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // const onSubmit = async (data) => {
-  //     setIsSubmitting(true);
-  //     try {
-  //         await axios.post("YOUR_API_ENDPOINT_HERE", data);
-  //         alert("Message sent successfully!");
-  //         reset();
-  //     } catch (error) {
-  //         alert("Failed to send message");
-  //     } finally {
-  //         setIsSubmitting(false);
-  //     }
-  // };
   return (
     <div>
-      {/* Contact */}
-      {/* <ReuseSubHeader title="Contact" subtitle="Home /Contact " /> */}
       <CommonHeader />
-      <div className="flex items-center justify-center min-h-screen py-6 px-4 md:px-6 lg:px-8">
+      <div className="flex flex-col items-center justify-center min-h-screen py-6 px-4 md:px-6 lg:px-8">
         <h2 className="text-4xl font-semibold mb-6 text-center leading-tight tracking-tight">
           Send Your Message
         </h2>
