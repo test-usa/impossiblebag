@@ -10,6 +10,7 @@ import bag5 from "/public/badge.png";
 
 import CommonWrapper from "../../components/CommonWrapper";
 import CommonButton from "../../components/CommonButton";
+import Header from "../../layout/Header";
 
 const BAG_DATA = [
   {
@@ -67,7 +68,8 @@ const Hero = () => {
   const handleCart = () => console.log("cart clicked");
 
   return (
-    <div className="bg-gradient-to-r from-[#F1FBFF] via-[#F1EDEB] to-[#F8DAB0] h-[1123px] overflow-hidden relative mt-[-80px]">
+    <div className="bg-gradient-to-r from-[#F1FBFF] via-[#F1EDEB] to-[#F8DAB0] h-[1123px] overflow-hidden relative">
+      <Header />
       <div className="lg:w-[868px] mt-[102px] mx-auto text-center">
         <h1 className="font-bold text-[72px]">
           Discover Iconic Styles at <br /> Unbeatable Value
@@ -76,8 +78,6 @@ const Hero = () => {
           From Chanel to Hermès, experience luxury at your fingertips with our
           verified and curated collections.
         </p>
-        <p>dsahfkajsdhfdkjsahdsjjds</p>
-        <CommonButton title="Start Shopping" />
       </div>
       <CommonWrapper>
         {BAG_DATA.map(
