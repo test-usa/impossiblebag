@@ -41,7 +41,7 @@ const NewsLetter = () => {
   };
 
   return (
-    <div className="slider-container py-20">
+    <div className="slider-container ">
       <Slider {...settings}>
         <div>
           <div className="relative h-[611px] w-full mx-auto bg-[#F8DAB0] rounded-[36px] p-10 flex items-center gap-10 overflow-hidden">
