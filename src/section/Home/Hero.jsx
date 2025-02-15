@@ -64,7 +64,7 @@ const Hero = () => {
   const handleCart = () => console.log("cart clicked");
 
   return (
-    <div className="lg:h-[1123px] py-10 px-10 bg-gradient-to-r from-[#F1FBFF] via-[#F1EDEB] to-[#F8DAB0] overflow-hidden relative mt-[-105px]">
+    <div className="lg:h-[1123px] py-10 px-10 bg-custom-gradient overflow-hidden relative ">
       <div className="lg:w-[868px] mt-[150px] mx-auto text-center">
         <h1 className="font-bold lg:text-[72px] text-4xl md:leading-[100px]">
           Discover Iconic Styles at <br /> Unbeatable Value
