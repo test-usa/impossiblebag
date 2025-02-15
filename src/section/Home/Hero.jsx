@@ -2,14 +2,16 @@ import { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 
-import bag1 from "/public/badge.png";
-import bag2 from "/public/badge.png";
-import bag3 from "/public/badge.png";
-import bag4 from "/public/badge.png";
-import bag5 from "/public/badge.png";
+import bag1 from "/Bag1.png";
+import bag2 from "/Bag2.png";
+import bag3 from "/Bag3.png";
+import bag4 from "/Bag4.png";
+import { FiArrowUpRight } from "react-icons/fi";
+
 
 import CommonWrapper from "../../components/CommonWrapper";
 import CommonButton from "../../components/CommonButton";
+import Header from "../../layout/Header";
 
 const BAG_DATA = [
   {
@@ -67,17 +69,23 @@ const Hero = () => {
   const handleCart = () => console.log("cart clicked");
 
   return (
-    <div className="bg-gradient-to-r from-[#F1FBFF] via-[#F1EDEB] to-[#F8DAB0] h-[1123px] overflow-hidden relative mt-[-80px]">
-      <div className="lg:w-[868px] mt-[102px] mx-auto text-center">
-        <h1 className="font-bold text-[72px]">
+    <div className="lg:h-[1123px] py-10 px-10 bg-custom-gradient overflow-hidden relative ">
+      <div className="lg:w-[868px] mt-[150px] mx-auto text-center">
+        <h1 className="font-bold lg:text-[72px] text-4xl md:leading-[100px]">
           Discover Iconic Styles at <br /> Unbeatable Value
         </h1>
         <p className="lg:w-[667px] mx-auto mt-8 text-[#7F7F7F]">
           From Chanel to Hermès, experience luxury at your fingertips with our
           verified and curated collections.
         </p>
-        <p>dsahfkajsdhfdkjsahdsjjds</p>
-        <CommonButton title="Start Shopping" />
+        <div className="flex items-center justify-center pt-6 md:pt-8">
+          <button className="rounded-[24px] font-[16px] bg-black text-white border border-black font-geist text-lg md:text-xl px-4 md:px-6 py-3 transition-all duration-300 hover:bg-white hover:text-black">
+            Start Shopping
+          </button>
+          <div className="bg-[#050505] rounded-full p-4 text-lg transition-all duration-300 text-white hover:bg-white hover:text-black">
+            <FiArrowUpRight className="z-50 " size={20} />
+          </div>
+        </div>
       </div>
 
       <div className="lg:flex lg:justify-center hidden">
