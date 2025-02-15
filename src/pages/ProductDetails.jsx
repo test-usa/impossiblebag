@@ -1,6 +1,8 @@
 import React from "react";
 import CommonHeader from "../components/CommonHeader";
 import ProductInfo from "../section/ProductDetails/ProductInfo";
+import RelatedProducts from "../section/ProductDetails/RelatedProducts";
+import TabSwitch from "../section/ProductDetails/TabSwitch";
 
 const ProductDetails = () => {
   return (
@@ -10,6 +12,8 @@ const ProductDetails = () => {
         title={"Shop / Product Details"}
       ></CommonHeader>
       <ProductInfo/>
+      <TabSwitch/>
+      <RelatedProducts/>
     </div>
   );
 };
