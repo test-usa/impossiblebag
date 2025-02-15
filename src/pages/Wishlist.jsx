@@ -1,5 +1,9 @@
 import React from "react";
 import CommonWrapper from "../components/CommonWrapper";
+import Header from "../layout/Header";
+import Card from "../section/home/Card";
+import CommonSpace from "../components/CommonSpace";
+import Bento from "../section/wishlist/Bento";
 
 const Wishlist = () => {
   // Example wishlist data
@@ -12,33 +16,34 @@ const Wishlist = () => {
     { id: 6, name: "Item 6", price: "$220", image: "image6.jpg", spanRows: 2 },
   ];
 
+  //"linear-gradient(98deg, #F1FBFF 0%, #F1EDEB 49.68%, #F8DAB0 95.53%)
   return (
-    <CommonWrapper>
-      <div
-        className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-6"
-        style={{
-          background:
-            "linear-gradient(98deg, #F1FBFF 0%, #F1EDEB 49.68%, #F8DAB0 95.53%)",
-        }}
-      >
-        {wishlistItems.map((item) => (
-          <div
-            key={item.id}
-            className={`bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 ${
-              item.spanRows === 2 ? "row-span-2" : ""
-            }`}
-          >
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-full h-auto rounded-md"
-            />
-            <h3 className="text-lg font-semibold mt-4">{item.name}</h3>
-            <p className="text-gray-700">{item.price}</p>
+    <>
+      <CommonWrapper>
+        <Header />
+        <div className="flex flex-col gap-4 items-center justify-center w-full">
+          <h2 className="font-bold text-[72px]">My Closet</h2>
+          <p className=" text-[#7F7F7F]">
+            Your favorite picks, all in one place
+          </p>
+        </div>
+      </CommonWrapper>
+      <CommonWrapper>
+        <CommonSpace>
+          <div className="p-4 rounded-xl bg-custom-gradient">
+            <div className=" p-4 bg-white rounded-xl ">
+              <div className=" grid grid-cols-4 gap-4">
+                <div className=" col-span-2">
+                  <Bento />
+                </div>
+                <Bento />
+                <Bento />
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
-    </CommonWrapper>
+        </CommonSpace>
+      </CommonWrapper>
+    </>
   );
 };
 

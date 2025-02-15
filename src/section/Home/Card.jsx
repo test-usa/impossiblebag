@@ -6,8 +6,11 @@ import CommonButton from "../../components/CommonButton";
 const Card = () => {
   return (
     <div className="bg-[#F0EDE6] font-geist flex  flex-col items-center  rounded-2xl relative cursor-pointer group gap-20  p-4 hover:translate-y-[-8px] transition-all duration-500   hover:shadow-[-2px_2px_5px_lightblue]">
-      <div className="flex justify-between w-full ">
-        <h2 className="text-[#050505] text-xl">Product Name</h2>
+      <div className="flex justify-between items-center  w-full ">
+        <div className="text-[#050505] text-xl font-Geist">
+          <h2>Product Name</h2>
+          <p className="font-semibold">$150.00</p>
+        </div>
         <span className="z-10 p-2 text-2xl bg-white rounded-full ">
           <IoMdHeartEmpty />
         </span>
