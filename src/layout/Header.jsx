@@ -19,10 +19,10 @@ import { IoMdCloseCircle } from "react-icons/io";
 export default function Header() {
   return (
     <CommonWrapper>
-      <Navbar className="px-5 sm:px-10 py-5">
-        <NavbarContent className="flex justify-between items-center w-full">
+      <Navbar className="py-5">
+        <NavbarContent className="flex justify-between w-full">
           {/* Dropdown for small screen */}
-          <div className="flex items-center">
+          <div className="">
             <Dropdown placement="bottom-end">
               <DropdownTrigger>
                 <Button className="bg-transparent">
@@ -32,16 +32,18 @@ export default function Header() {
               <DropdownMenu
                 aria-label="Link Actions"
                 variant="flat"
-                className="bg-[linear-gradient(98deg,_#F1FBFF_0%,_#F1EDEB_49.68%,_#F8DAB0_95.53%)]"
+                // className="bg-[linear-gradient(98deg,_#F1FBFF_0%,_#F1EDEB_49.68%,_#F8DAB0_95.53%)]"
               >
                 <DropdownItem>
-                  <div className="flex">
+                  <div className="flex justify-items-end">
                     <img
                       src={headerLogo}
-                      className="w-[126px] h-[80px]"
+                      className="w-[126px] h-[80px] "
                       alt=""
                     />
-                    <IoMdCloseCircle />
+                    <div className="pl-7">
+                      <IoMdCloseCircle />
+                    </div>
                   </div>
                 </DropdownItem>
                 <DropdownItem
@@ -91,9 +93,11 @@ export default function Header() {
           </div>
 
           {/* Logo */}
-          <NavbarBrand className="w-[172px] h-[112px]">
-            <img src={headerLogo} alt="Logo" />
-          </NavbarBrand>
+          <NavbarContent>
+            <NavbarBrand className="w-[172px] h-[112px]">
+              <img src={headerLogo} alt="Logo" />
+            </NavbarBrand>
+          </NavbarContent>
 
           {/* Navbar content (icons and user info) */}
           <NavbarContent
