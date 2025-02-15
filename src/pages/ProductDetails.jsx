@@ -4,7 +4,7 @@ import CommonWrapper from "../components/CommonWrapper";
 import ProductInfo from "../section/ProductDetails/ProductInfo";
 import RelatedProducts from "../section/ProductDetails/RelatedProducts";
 import TabSwitch from "../section/ProductDetails/TabSwitch";
-import CommoSpace from "../components/CommoSpace";
+import CommonSpace from "../components/CommonSpace";
 import NewsLetter from "../components/NewsLetter";
 
 const ProductDetails = () => {
@@ -14,13 +14,13 @@ const ProductDetails = () => {
         heading={"Product Details"}
         title={"Shop / Product Details"}
       ></CommonHeader>
-      <CommoSpace>
+      <CommonSpace>
         <ProductInfo />
-      </CommoSpace>
+      </CommonSpace>
       <TabSwitch />
-      <CommoSpace>
+      <CommonSpace>
         <RelatedProducts />
-      </CommoSpace>
+      </CommonSpace>
       <CommonWrapper>
         <NewsLetter />
       </CommonWrapper>
