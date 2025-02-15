@@ -41,7 +41,7 @@ const BAG_DATA = [
   {
     id: 3,
     image: bag3,
-    hoverImage:bag1,
+    hoverImage: bag1,
     price: "$1800",
     top: 683,
     left: 1033,
