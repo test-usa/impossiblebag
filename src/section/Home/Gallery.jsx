@@ -15,10 +15,10 @@ const Gallery = () => {
     <div className=" w-full grid grid-cols-1 gap-3 justify-items-center ">
       <div className="grid grid-cols-4 gap-2  place-items-stretch  ">
         <div className="col-span-2 ">
-          <img className=" " src={g9} alt="img" />
+          <img src={g9} alt="img" />
         </div>
-        <img className="" src={g2} alt="img" />
-        <img className="" src={g3} alt="img" />
+        <img src={g2} alt="img" />
+        <img src={g3} alt="img" />
       </div>
 
       <div className="grid grid-cols-4 gap-2  place-items-stretch">
