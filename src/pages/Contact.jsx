@@ -18,7 +18,7 @@ const Contact = () => {
               </h3>
               <input
                 placeholder="First Name"
-                className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full  lg:w-[493px] p-4  border border-gray-300 rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -29,7 +29,7 @@ const Contact = () => {
 
               <input
                 placeholder="Last Name"
-                className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-4 border lg:w-[493px]  border-gray-300 rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           </div>
@@ -42,7 +42,7 @@ const Contact = () => {
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-4  lg:w-[493px] border border-gray-300 rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -54,7 +54,7 @@ const Contact = () => {
               <input
                 type="tel"
                 placeholder="Phone Number"
-                className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-4  lg:w-[493px] border border-gray-300 rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           </div>
@@ -66,7 +66,7 @@ const Contact = () => {
             <textarea
               placeholder="Your Message"
               rows={4}
-              className="w-full h-[350px] p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full h-[350px] p-4 lg:w-[493px] md:w-[493px] border border-gray-300 rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
