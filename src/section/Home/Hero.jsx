@@ -3,11 +3,11 @@ import { GoArrowUpRight } from "react-icons/go";
 import { IoMdAdd } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 
-import bag1 from "/public/badge.png";
-import bag2 from "/public/badge.png";
-import bag3 from "/public/badge.png";
-import bag4 from "/public/badge.png";
-import bag5 from "/public/badge.png";
+import bag1 from "/badge.png";
+import bag2 from "/badge.png";
+import bag3 from "/badge.png";
+import bag4 from "/badge.png";
+import bag5 from "/badge.png";
 // import bag2 from "../../assets/header/bags/2.png";
 // import bag3 from "../../assets/header/bags/3.png";
 // import bag4 from "../../assets/header/bags/4.png";
@@ -70,8 +70,8 @@ const Hero = () => {
   const handleCart = () => console.log("cart clicked");
 
   return (
-    <div className="bg-gradient-to-r from-[#F1FBFF] via-[#F1EDEB] to-[#F8DAB0] h-[1123px] overflow-hidden relative mt-[-80px]">
-      <div className="lg:w-[868px] mt-[102px] mx-auto text-center">
+    <div className="bg-gradient-to-r from-[#F1FBFF] via-[#F1EDEB] to-[#F8DAB0] h-[1123px] overflow-hidden relative mt-[-105px]">
+      <div className="lg:w-[868px] mt-[150px] mx-auto text-center">
         <h1 className="font-bold text-[72px]">
           Discover Iconic Styles at <br /> Unbeatable Value
         </h1>
