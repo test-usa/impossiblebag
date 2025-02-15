@@ -10,58 +10,63 @@ import visa from "../assets/images/visa.png";
 import master from "../assets/images/master.png";
 import paypal from "../assets/images/paypal.png";
 import CommonWrapper from "../components/CommonWrapper";
+import logo from "../assets/images/logo.png";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white pt-6 pb-6 w-full">
-      <div className="flex flex-col sm:flex-row justify-between px-5 sm:px-10 items-center">
-        <div className="flex flex-col items-center sm:items-start">
-          <div className="w-[204px] h-[127px] ">
-            <img src={footerLogo} alt="Footer Logo" />
-          </div>
-          <div className="flex flex-row gap-5 justify-center pl-5 md:pl-12 lg:pl-12">
-            <div className="w-[24px] h-[24px]">
-              <FaInstagramSquare />
-            </div>
-            <div className="w-[24px] h-[24px]">
-              <FaFacebook />
-            </div>
-            <div className="w-[24px] h-[24px]">
-              <BsTwitterX />
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-6 sm:mt-0 flex flex-col sm:flex-row gap-10 text-center sm:text-left">
-          <div>
-            <p className="text-[20px] font-semibold">Shipping with us</p>
-            <br />
-            <p className="text-[16px] font-normal">Making payments</p>
-            <br />
-            <p className="text-[16px] font-normal">Delivery options</p>
-          </div>
-          <div>
-            <p className="text-[20px] font-semibold">Pay with</p>
-            <div className="flex gap-2 pt-2 justify-center sm:justify-start">
-              <img className="w-[36px] h-[24px]" src={visa} alt="Visa" />
+    <div className="bg-black text-white py-3 w-full">
+      <CommonWrapper>
+        <div className="flex flex-col sm:flex-row justify-between items-center">
+          <div className="flex flex-col lg:items-start sm:items-start">
+            <div className="">
               <img
-                className="w-[36px] h-[24px]"
-                src={master}
-                alt="Mastercard"
+                className="w-[100px] h-[70px] "
+                src={logo}
+                alt="Footer Logo"
               />
-              <img className="w-[36px] h-[24px]" src={paypal} alt="Paypal" />
+            </div>
+            <div className="flex flex-row gap-5 justify-center pt-2">
+              <div className="text-2xl">
+                <FaInstagramSquare />
+              </div>
+              <div className="text-2xl">
+                <FaFacebook />
+              </div>
+              <div className="text-2xl">
+                <BsTwitterX />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-3 sm:mt-0 flex flex-col sm:flex-row gap-10 text-center sm:text-left">
+            <div>
+              <p className="text-xl font-semibold">Shipping with us</p>
+              <p className="text-[16px] font-normal pt-1">Making payments</p>
+              <p className="text-[16px] font-normal pt-1">Delivery options</p>
+            </div>
+            <div>
+              <p className="text-xl font-semibold">Pay with</p>
+              <div className="flex gap-2 pt-2 justify-center sm:justify-start">
+                <img className="w-[36px] h-[24px]" src={visa} alt="Visa" />
+                <img
+                  className="w-[36px] h-[24px]"
+                  src={master}
+                  alt="Mastercard"
+                />
+                <img className="w-[36px] h-[24px]" src={paypal} alt="Paypal" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="py-7">
-        <div className="px-7">
-          <hr />
+        <div className="pt-3">
+          <div>
+            <hr className="border-t border-[#444343]" />
+          </div>
+          <p className="pt-4 text-center font-normal">
+            Copyright@2024TheImpossibleBags
+          </p>
         </div>
-        <p className="pt-[24px] text-center font-normal">
-          Copyright@2024TheImpossibleBags
-        </p>
-      </div>
+      </CommonWrapper>
     </div>
   );
 };
