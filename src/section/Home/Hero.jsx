@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { GoArrowUpRight } from "react-icons/go";
 import { IoMdAdd } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 
@@ -8,11 +7,9 @@ import bag2 from "/public/badge.png";
 import bag3 from "/public/badge.png";
 import bag4 from "/public/badge.png";
 import bag5 from "/public/badge.png";
-// import bag2 from "../../assets/header/bags/2.png";
-// import bag3 from "../../assets/header/bags/3.png";
-// import bag4 from "../../assets/header/bags/4.png";
-// import hoverBag1 from "../../assets/header/bags/hover-1.png";
+
 import CommonWrapper from "../../components/CommonWrapper";
+import CommonButton from "../../components/CommonButton";
 
 const BAG_DATA = [
   {
@@ -41,7 +38,7 @@ const BAG_DATA = [
   {
     id: 3,
     image: bag3,
-    hoverImage:bag1,
+    hoverImage: bag1,
     price: "$1800",
     top: 683,
     left: 1033,
@@ -79,16 +76,9 @@ const Hero = () => {
           From Chanel to Hermès, experience luxury at your fingertips with our
           verified and curated collections.
         </p>
-        <div className="mt-8 flex justify-center ">
-          <button className="bg-black px-[48px] py-[14px] text-[16px] text-white font-semibold rounded-[36px]">
-            Start Shopping
-          </button>
-          <button className="bg-black p-[20px] text-white rounded-full">
-            <GoArrowUpRight />
-          </button>
-        </div>
+        <p>dsahfkajsdhfdkjsahdsjjds</p>
+        <CommonButton title="Start Shopping" />
       </div>
-
       <CommonWrapper>
         {BAG_DATA.map(
           ({
