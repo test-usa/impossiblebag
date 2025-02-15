@@ -4,13 +4,13 @@ import Card from "../section/home/Card";
 import CommonWrapper from "../components/CommonWrapper";
 import Tab from "../section/home/Tab";
 import CommonExclusiveCard from "../components/CommonExclusiveCard";
-import CommoSpace from "../components/CommoSpace";
 import CollectionList from "../section/home/CollectionList";
 import Support from "../section/home/Support";
 import NewsLetter from "../components/NewsLetter";
 import BestSelling from "../section/home/BestSelling";
 import BestBag from "../section/home/BestBag";
 import Gallery from "../section/home/Gallery";
+import CommonSpace from "../components/CommonSpace";
 const list = new Array(9).fill(null);
 
 const Home = () => {
@@ -19,33 +19,33 @@ const Home = () => {
       <Hero />
       <CommonWrapper>
         <div className="">
-          <CommoSpace>
+          <CommonSpace>
             <Tab />
-          </CommoSpace>
+          </CommonSpace>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
             {list.map((item, i) => (
               <Card key={i} />
             ))}
           </div>
-          <CommoSpace>
+          <CommonSpace>
             <CommonExclusiveCard />
-          </CommoSpace>
+          </CommonSpace>
 
           <CollectionList />
-          <CommoSpace>
+          <CommonSpace>
             <Support />
-          </CommoSpace>
+          </CommonSpace>
 
           <NewsLetter />
-          <CommoSpace>
+          <CommonSpace>
             <BestSelling />
-          </CommoSpace>
+          </CommonSpace>
           <BestBag />
 
-          <CommoSpace>
+          <CommonSpace>
             <Gallery />
-          </CommoSpace>
+          </CommonSpace>
         </div>
       </CommonWrapper>
     </div>
