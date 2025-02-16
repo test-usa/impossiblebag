@@ -1,7 +1,6 @@
 import React from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
 import bag from "../../assets/images/bag.png";
-import CommonButton from "../../components/CommonButton";
 import { FiArrowUpRight } from "react-icons/fi";
 
 const Card = () => {
