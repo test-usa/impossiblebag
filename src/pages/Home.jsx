@@ -13,7 +13,10 @@ import Gallery from "../section/home/Gallery";
 import CommonSpace from "../components/CommonSpace";
 const list = new Array(9).fill(null);
 
+
+
 const Home = () => {
+
   return (
     <div>
       <Hero />
@@ -48,6 +51,9 @@ const Home = () => {
           </CommonSpace>
         </div>
       </CommonWrapper>
+
+
+
     </div>
   );
 };

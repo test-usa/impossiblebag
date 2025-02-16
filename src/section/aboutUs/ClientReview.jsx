@@ -1,107 +1,120 @@
 import { useState } from "react";
-import Slider from "react-slick";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft } from "lucide-react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { divider } from "@heroui/theme";
 
-const ClientReview = () => {
-  const [slider, setSlider] = useState(null);
+const testimonials = [
+    {
+        id: 1,
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique doloribus quidem earum. Pariatur aut dolores facilis sed autem sint quisquam eius quod quo rerum et architecto quaerat, necessitatibus earum possimus?",
+        name: "Emmett Torphy",
+        role: "Direct Operations Producer",
+        img: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
+    {
+        id: 2,
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique doloribus quidem earum. Pariatur aut dolores facilis sed autem sint quisquam eius quod quo rerum et architecto quaerat, necessitatibus earum possimus?",
+        name: "John Doe",
+        role: "Project Manager",
+        img: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
+    {
+        id: 3,
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique doloribus quidem earum. Pariatur aut dolores facilis sed autem sint quisquam eius quod quo rerum et architecto quaerat, necessitatibus earum possimus?",
+        name: "Jane Smith",
+        role: "Marketing Specialist",
+        img: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
+    {
+        id: 4,
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique doloribus quidem earum. Pariatur aut dolores facilis sed autem sint quisquam eius quod quo rerum et architecto quaerat, necessitatibus earum possimus?",
+        name: "Alex Brown",
+        role: "Software Engineer",
+        img: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
+    {
+        id: 5,
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique doloribus quidem earum. Pariatur aut dolores facilis sed autem sint quisquam eius quod quo rerum et architecto quaerat, necessitatibus earum possimus?",
+        name: "Alex Brown",
+        role: "Software Engineer",
+        img: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
+    {
+        id: 6,
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique doloribus quidem earum. Pariatur aut dolores facilis sed autem sint quisquam eius quod quo rerum et architecto quaerat, necessitatibus earum possimus?",
+        name: "Alex Brown",
+        role: "Software Engineer",
+        img: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    }
+];
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+export default function OfferProductReview() {
+    const [activeIndex, setActiveIndex] = useState(1);
 
-  return (
-    <div className="p-8 pt-20 max-w-[1880px] mx-auto">
-      {/* Testimonials Section */}
-      <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-center md:text-left">
-          Hear from Our Satisfied Clients
-        </h2>
-        <p className="text-gray-500 text-center md:text-left">
-          Here is what some of our Clients have to say about their experience
-          working with us.
-        </p>
+    const handlePrev = () => {
+        setActiveIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : 0));
+    };
 
-        {/* Testimonials Carousel */}
-        <div className="w-[1529px] relative gap-x-10 left-20 mx-auto">
-          <Slider ref={(c) => setSlider(c)} {...settings}>
-            {[1, 2, 3, 4, 5].map((_, i) => (
-            <div className="flex gap-x-20">
-                <Card
-                key={i}
-                className="w-[622px] h-[336px] p-6 bg-custom-gradient mx-2 "
-              >
-                <CardContent>
-                  <div className="flex items-center justify-center gap-2 text-yellow-500 text-xl">
-                    ★★★★★
-                  </div>
-                  <p className="mt-2 text-gray-600">
-                    Potter Ipsum Wand Elf Parchment Wingardium. Patronum Beaters
-                    Stand Butter Wheels Squashy Owl.
-                  </p>
-                  <div className="flex items-center mt-4 gap-2">
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-                      alt="Client"
-                      className="w-10 h-10 rounded-full"
-                    />
-                    <div>
-                      <p className="font-semibold">Emmett Torphy</p>
-                      <p className="text-gray-500 text-sm">
-                        Direct Operations Producer
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+    const handleNext = () => {
+        setActiveIndex((prevIndex) => (prevIndex < testimonials.length - 2 ? prevIndex + 1 : testimonials.length - 2));
+    };
+
+    return (
+        <div className="p-8 mt-5 w-[1880px] ml-64 overflow-hidden ">
+            <div className="space-y-6">
+                <h2 className="text-2xl font-bold">Hear from Our Satisfied Clients</h2>
+                <p className="text-gray-500">Here is what some of our Clients have to say about their Experience of working with us.</p>
+
+                {/* Carousel */}
+                <div className="flex items-center gap-4 transition-transform duration-300" style={{ transform: `translateX(-${activeIndex * 33}%)` }}>
+                    {testimonials.map((testimonial, i) => (
+                        <Card
+                            key={testimonial.id}
+                            className={`p-6 transition-all duration-300 ${i === activeIndex ? "scale-100" : "scale-95 opacity-75"} w-[622px] h-[336px]`}
+                            style={{
+                                background: "linear-gradient(135deg, #F1FBFF, #F1EDEB, #F8DAB0)",
+                                minWidth: "33%",
+                                maxWidth: "33%",
+                            }}
+                        >
+                            <div className="w-[542px] h-[215px]  flex items-center justify-start mt-6 ">
+                                <CardContent className=''>
+                                    <div className=" flex items-center gap-2 text-yellow-500 text-xl">★★★★★</div>
+                                    <p className="mt-2 text-gray-600">{testimonial.text}</p>
+                                    <div className="flex items-center mt-4 gap-2">
+                                        <img src={testimonial.img} alt={testimonial.name} className="w-10 h-10 rounded-full" />
+                                        <div>
+                                            <p className="font-semibold">{testimonial.name}</p>
+                                            <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                                        </div>
+                                    </div>
+                                </CardContent>
+                            </div>
+
+                        </Card>
+                    ))}
+                </div>
+
+                {/* Navigation Buttons */}
+                <div className="flex justify-end gap-2 mt-6 mr-52">
+                    <Button
+                        variant="outline"
+                        onClick={handlePrev}
+                        className={`${activeIndex === 0 ? "opacity-50 cursor-not-allowed" : "bg-white text-black"}`}
+                        disabled={activeIndex === 0}
+                    >
+                        <ArrowLeft size={18} />
+                    </Button>
+                    <Button
+                        variant="outline"
+                        onClick={handleNext}
+                        className={`${activeIndex >= testimonials.length - 2 ? "opacity-50 cursor-not-allowed" : "bg-white text-black"}`}
+                        disabled={activeIndex >= testimonials.length - 2}
+                    >
+                        <ArrowRight size={18} />
+                    </Button>
+                </div>
             </div>
-            ))}
-          </Slider>
         </div>
-      </div>
-
-      {/* Navigation Buttons */}
-      <div className=" top-1/2 left-0 transform -translate-y-1/2 z-10">
-        <button
-          onClick={() => slider?.slickPrev()}
-          className="w-14 h-14 flex items-center justify-center rounded-[16px] bg-white text-black border border-[#141414] hover:bg-black hover:text-white"
-        >
-          <ArrowLeft size={20} />
-        </button>
-      </div>
-      <div className=" top-1/2 right-0 transform -translate-y-1/2 z-10">
-        <button
-          onClick={() => slider?.slickNext()}
-          className="w-14 h-14 flex items-center justify-center rounded-[16px] bg-white text-black border border-[#141414] hover:bg-black hover:text-white"
-        >
-          <ArrowRight size={20} />
-        </button>
-      </div>
-    </div>
-  );
-};
-
-export default ClientReview;
+    );
+}

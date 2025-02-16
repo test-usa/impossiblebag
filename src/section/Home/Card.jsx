@@ -2,6 +2,7 @@ import React from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
 import bag from "../../assets/images/bag.png";
 import CommonButton from "../../components/CommonButton";
+import { Link } from "react-router-dom";
 
 const Card = () => {
   return (
@@ -15,7 +16,7 @@ const Card = () => {
           <IoMdHeartEmpty />
         </span>
       </div>
-      <CommonButton title={"View Details"} />
+        <CommonButton title={"View Details"} />
       <div className="max-w-[384px]">
         <img className="w-full" src={bag} alt="bang" />
       </div>
