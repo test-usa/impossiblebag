@@ -8,6 +8,7 @@ import CommonSpace from "../components/CommonSpace";
 import NewsLetter from "../components/NewsLetter";
 import SapceBottom from "../components/SapceBottom";
 import Header from "../layout/Header";
+import CommonHeader from "../components/CommonHeader";
 
 const Shop = () => {
   const list = new Array(20).fill(null);
@@ -15,10 +16,7 @@ const Shop = () => {
     <>
       <div className="bg-gradient-to-r from-[#F1FBFF] via-[#F1EDEB] to-[#F8DAB0]">
         <Header />
-        <div className="flex flex-col gap-2 items-center  w-full">
-          <h2 className="font-bold text-[72px] font-Geist">Shop</h2>
-          <p className=" font-Poppins ">Home / Shop</p>
-        </div>
+        <CommonHeader heading="Shop" title="shop" />
       </div>
       <CommonWrapper>
         <CommonSpace>

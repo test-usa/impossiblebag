@@ -4,6 +4,7 @@ import Header from "../layout/Header";
 import Card from "../section/home/Card";
 import CommonSpace from "../components/CommonSpace";
 import Bento from "../section/wishlist/Bento";
+import BigBento from "../section/wishlist/BigBento";
 
 const Wishlist = () => {
   // Example wishlist data
@@ -31,13 +32,19 @@ const Wishlist = () => {
       <CommonWrapper>
         <CommonSpace>
           <div className="p-4 rounded-xl bg-custom-gradient">
-            <div className=" p-4 bg-white rounded-xl ">
-              <div className=" grid grid-cols-4 gap-4">
-                <div className=" col-span-2">
-                  <Bento />
+            <div className="p-4 ">
+              <div className="flex flex-col sm:flex-row items-stretch  justify-center gap-6 ">
+                <div className=" flex-1 rounded-xl">
+                  <BigBento />
                 </div>
-                <Bento />
-                <Bento />
+                <div className=" flex-1 flex flex-col gap-6">
+                  <div className="rounded-xl">
+                    <Bento />
+                  </div>
+                  <div className=" rounded-xl">
+                    <Bento />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
