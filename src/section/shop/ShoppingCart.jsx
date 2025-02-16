@@ -1,6 +1,6 @@
 import React from "react";
 import shopbag from "../shop/images/shopbag.png";
-import CardHeader from "./CardHeader";
+import CardHeader from "./CardHeader.jsx";
 import Color from "./Color";
 const ShoppingCart = () => {
   return (

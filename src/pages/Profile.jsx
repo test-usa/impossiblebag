@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import CommonWrapper from "../components/CommonWrapper";
+import CommonWrapper from "../components/CommonWrapper.jsx";
 import { Button, Form, Input, Select, SelectItem } from "@heroui/react";
-import CommonHeader from "../components/CommonHeader";
+import CommonHeader from "../components/CommonHeader.jsx";
 import Header from "../layout/Header.jsx";
-import CommonSpace from "../components/CommonSpace";
+import CommonSpace from "../components/CommonSpace.jsx";
 const Profile = () => {
   const [submitted, setSubmitted] = useState(null);
 

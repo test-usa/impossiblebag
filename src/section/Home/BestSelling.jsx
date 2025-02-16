@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import Card from "./Card.jsx";
 
 const BestSelling = () => {
   const list = new Array(3).fill(null);

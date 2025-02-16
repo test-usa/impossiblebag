@@ -1,11 +1,11 @@
 import React from "react";
-import Color from "./Color";
-import Designer from "./Designer";
-import BagType from "./BagType";
-import MediumHeader from "./MediumHeader";
-import Divider from "./Divider";
-import Availability from "./Availability";
-import PriceSlider from "./PriceSlider";
+import Color from "./Color.jsx";
+import Designer from "./Designer.jsx";
+import BagType from "./BagType.jsx";
+import MediumHeader from "./MediumHeader.jsx";
+import Divider from "./Divider.jsx";
+import Availability from "./Availability.jsx";
+import PriceSlider from "./PriceSlider.jsx";
 
 const Filter = () => {
   return (

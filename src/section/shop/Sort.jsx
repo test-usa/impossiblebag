@@ -1,6 +1,6 @@
 import { Select, SelectItem } from "@heroui/react";
 import React from "react";
-import FilterModal from "./FilterModal";
+import FilterModal from "./FilterModal.jsx";
 
 const Sort = () => {
   const animals = [

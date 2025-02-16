@@ -1,7 +1,7 @@
 import React from "react";
 import { Checkbox } from "@heroui/checkbox";
-import MediumHeader from "./MediumHeader";
-import Divider from "./Divider";
+import MediumHeader from "./MediumHeader.jsx";
+import Divider from "./Divider.jsx";
 
 const availability = ["In Stock (56)", "Out of  Stock (56)"];
 const Availability = () => {

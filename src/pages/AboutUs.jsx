@@ -1,8 +1,8 @@
 import React from "react";
-import CommonWrapper from "../components/CommonWrapper";
-import { StaticCard } from "../section/aboutUs/StaticCard";
-import CommonExclusiveCard from "../components/CommonExclusiveCard";
-import NewsLetter from "../components/NewsLetter";
+import CommonWrapper from "../components/CommonWrapper.jsx";
+import { StaticCard } from "../section/aboutUs/StaticCard.jsx";
+import CommonExclusiveCard from "../components/CommonExclusiveCard.jsx";
+import NewsLetter from "../components/NewsLetter.jsx";
 import ClientReview from "../section/aboutUs/ClientReview.jsx";
 import CommonButton from "../components/CommonButton.jsx";
 import Header from "../layout/Header.jsx";

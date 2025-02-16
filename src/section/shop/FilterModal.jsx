@@ -9,12 +9,10 @@ import {
   useDisclosure,
   Select,
   SelectItem,
-  Avatar,
-  divider,
 } from "@heroui/react";
-import PriceSlider from "./PriceSlider";
-import Color from "./Color";
-import MediumHeader from "./MediumHeader";
+import PriceSlider from "./PriceSlider.jsx";
+import Color from "./Color.jsx";
+import MediumHeader from "./MediumHeader.jsx";
 import { IoFilterOutline } from "react-icons/io5";
 
 const FilterModal = () => {

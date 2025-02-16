@@ -1,6 +1,6 @@
 import React from "react";
-import BigBento from "./BigBento";
-import Bento from "./Bento";
+import BigBento from "./BigBento.jsx";
+import Bento from "./Bento.jsx";
 
 const BentoFirst = () => {
   return (
