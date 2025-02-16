@@ -1,4 +1,4 @@
-import MenImg from "/public/2148068409__1_-removebg-preview 2.png";
+import MenImg from "/2148068409__1_-removebg-preview 2.png";
 // import bagImg from "../assets/Newsletter/newsbag.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -41,7 +41,7 @@ const NewsLetter = () => {
   };
 
   return (
-    <div className="slider-container py-20">
+    <div className="slider-container ">
       <Slider {...settings}>
         <div>
           <div className="relative h-[611px] w-full mx-auto bg-[#F8DAB0] rounded-[36px] p-10 flex items-center gap-10 overflow-hidden">

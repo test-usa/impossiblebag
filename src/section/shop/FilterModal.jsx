@@ -15,6 +15,7 @@ import {
 import PriceSlider from "./PriceSlider";
 import Color from "./Color";
 import MediumHeader from "./MediumHeader";
+import { IoFilterOutline } from "react-icons/io5";
 
 const FilterModal = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -35,9 +36,9 @@ const FilterModal = () => {
   ];
   return (
     <>
-      <Button color="default" variant="flat" onPress={onOpen}>
-        Filter
-      </Button>
+      <button className="text-xl" onClick={onOpen}>
+        <IoFilterOutline />
+      </button>
       <Drawer
         radius="none"
         isOpen={isOpen}

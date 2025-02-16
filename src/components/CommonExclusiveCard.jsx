@@ -2,6 +2,7 @@ import React from "react";
 import ExclusiveImg from "/public/ExclusiveImg.jpg";
 import CommonWrapper from "./CommonWrapper";
 import RightTopArrow from "/public/RightTopArrow.png";
+import CommonButton from "./CommonButton";
 const CommonExclusiveCard = () => {
   return (
     <CommonWrapper>
@@ -18,7 +19,7 @@ const CommonExclusiveCard = () => {
 
         <div className="lg:w-1/2 w-full bg-primary rounded-tr-[36px] rounded-br-[36px] flex justify-center items-center p-8 md:p-10">
           <div className="bg-white rounded-[36px] p-6 md:p-8 flex flex-col items-center w-full max-w-sm md:max-w-md">
-            <h2 className="font-geist font-semibold text-xl md:text-2xl pt-6 md:pt-8 text-center">
+            <h2 className="pt-6 text-xl font-semibold text-center font-geist md:text-2xl md:pt-8">
               Exclusive bag offers await
             </h2>
 
@@ -28,17 +29,21 @@ const CommonExclusiveCard = () => {
               <br /> elit arcu tellus.
             </p>
 
+            <CommonButton title=" See Collection" />
             <div className="flex items-center pt-6 md:pt-8">
               {/* <GroupButton
               buttonText="Try NOW"
-              icon={<ArrowIcon className=" " />}
+              icon={<ArrowIcon className="" />}
             /> */}
               <button className="rounded-[24px] font-[16px] bg-black text-white border border-black font-geist text-lg md:text-xl px-4 md:px-6 py-2 transition-all duration-300 hover:bg-white hover:text-black">
                 See Collection
               </button>
-              
-                <img className="w-[54px] h-[54px] rounded-full font-[16px] bg-black text-white border border-black font-geist text-lg md:text-xl px-4 md:px-6 py-2 transition-all duration-300 hover:bg-white hover:text-black" src={RightTopArrow} alt="" />
-              
+
+              <img
+                className="w-[54px] h-[54px] rounded-full font-[16px] bg-black text-white border border-black font-geist text-lg md:text-xl px-4 md:px-6 py-2 transition-all duration-300 hover:bg-white hover:text-black"
+                src={RightTopArrow}
+                alt=""
+              />
             </div>
           </div>
         </div>
