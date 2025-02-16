@@ -3,8 +3,6 @@ import CommonWrapper from "../components/CommonWrapper";
 import Filter from "../section/shop/Filter";
 import Sort from "../section/shop/Sort";
 import ShoppingCart from "../section/shop/ShoppingCart";
-import { Button } from "@heroui/react";
-import FilterModal from "../section/shop/FilterModal";
 import NewsLetter from "../components/NewsLetter";
 import CustomPagination from "../section/shop/CustomPagination";
 import CommonSpace from "../components/CommonSpace";
