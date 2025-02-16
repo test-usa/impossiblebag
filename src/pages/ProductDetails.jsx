@@ -1,9 +1,33 @@
-import React from 'react'
+import React from "react";
+import CommonHeader from "../components/CommonHeader";
+import CommonWrapper from "../components/CommonWrapper";
+import ProductInfo from "../section/ProductDetails/ProductInfo";
+import RelatedProducts from "../section/ProductDetails/RelatedProducts";
+import TabSwitch from "../section/ProductDetails/TabSwitch";
+import CommonSpace from "../components/CommonSpace";
+import NewsLetter from "../components/NewsLetter";
 
 const ProductDetails = () => {
   return (
-    <div>ProductDetails</div>
-  )
-}
+    <div className="mt-[-105px]">
+      <CommonHeader
+        heading={"Product Details"}
+        title={"Shop / Product Details"}
+      ></CommonHeader>
+      <CommonSpace>
+        <ProductInfo />
+      </CommonSpace>
+      <TabSwitch />
+      <CommonSpace>
+        <RelatedProducts />
+      </CommonSpace>
+      <CommonWrapper>
+        <div className="py-20">
+          <NewsLetter />
+        </div>
+      </CommonWrapper>
+    </div>
+  );
+};
 
-export default ProductDetails
+export default ProductDetails;
