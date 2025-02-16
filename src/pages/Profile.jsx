@@ -1,18 +1,10 @@
 import React, { useState } from "react";
 import CommonWrapper from "../components/CommonWrapper";
-import { Input } from "@heroui/react";
+import { Button, Form, Input, Select, SelectItem } from "@heroui/react";
 import CommonHeader from "../components/CommonHeader";
 import Header from "../layout/Header";
+import CommonSpace from "../components/CommonSpace";
 const Profile = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [town, setTown] = useState("");
-  const [country, setCountry] = useState("");
-  const [postCode, setPostCode] = useState("");
-
   const [submitted, setSubmitted] = useState(null);
 
   const onSubmit = (e) => {
@@ -24,6 +16,21 @@ const Profile = () => {
     console.log(data);
   };
 
+  const animals = [
+    { key: "cat", label: "Cat" },
+    { key: "dog", label: "Dog" },
+    { key: "elephant", label: "Elephant" },
+    { key: "lion", label: "Lion" },
+    { key: "tiger", label: "Tiger" },
+    { key: "giraffe", label: "Giraffe" },
+    { key: "dolphin", label: "Dolphin" },
+    { key: "penguin", label: "Penguin" },
+    { key: "zebra", label: "Zebra" },
+    { key: "shark", label: "Shark" },
+    { key: "whale", label: "Whale" },
+    { key: "otter", label: "Otter" },
+    { key: "crocodile", label: "Crocodile" },
+  ];
   return (
     <>
       <div className="bg-gradient-to-r from-[#F1FBFF] via-[#F1EDEB] to-[#F8DAB0]">
@@ -31,124 +38,144 @@ const Profile = () => {
         <CommonHeader heading="profile" title="profile" />
       </div>
       <CommonWrapper>
-        <div
-          className="flex flex-col w-full max-w-screen-lg h-auto rounded-[24px] mt-[40px] pt-[40px] items-center justify-center flex-shrink-0 px-10"
-          style={{
-            background:
-              "linear-gradient(98deg, #F1FBFF 0%, #F1EDEB 49.68%, #F8DAB0 95.53%)",
-          }}
-        >
-          <form
-            onSubmit={onSubmit}
-            className="w-full flex flex-col sm:grid sm:grid-cols-2 gap-[10px] pt-10 px-5"
-          >
-            <Input
-              errorMessage="Please enter your first name"
-              label="First Name"
-              labelPlacement="outside"
-              name="first name"
-              placeholder="Enter your first name"
-              type="text"
-              value={firstName}
-              onValueChange={setFirstName}
-              className="w-full sm:w-[490px] lg:w-[490px] max-w-full py-3"
-              style={{ height: "64px" }}
-            />
-            <Input
-              errorMessage="Please enter last name"
-              label="Last Name"
-              labelPlacement="outside"
-              name="last name"
-              placeholder="Enter your last name"
-              type="text"
-              value={lastName}
-              onValueChange={setLastName}
-              className="w-full sm:w-[490px] lg:w-[490px] max-w-full py-3"
-              style={{ height: "64px" }}
-            />
-            <Input
-              errorMessage="Please enter Email Address"
-              label="Email Address"
-              labelPlacement="outside"
-              name="email"
-              placeholder="Enter your Email Address"
-              type="email"
-              value={email}
-              onValueChange={setEmail}
-              className="w-full sm:w-[490px] lg:w-[490px] max-w-full py-3"
-              style={{ height: "64px" }}
-            />
-            <Input
-              errorMessage="Please enter a Phone Number"
-              label="Phone Number"
-              labelPlacement="outside"
-              name="phone"
-              placeholder="1234567890"
-              type="text"
-              value={phone}
-              onValueChange={setPhone}
-              className="w-full sm:w-[490px] lg:w-[490px] max-w-full py-3"
-              style={{ height: "64px" }}
-            />
-            <Input
-              errorMessage="Please enter your Address"
-              label="Address"
-              labelPlacement="outside"
-              name="address"
-              placeholder="Enter your Address"
-              type="text"
-              value={address}
-              onValueChange={setAddress}
-              className="w-full sm:w-[490px] lg:w-[490px] max-w-full py-3"
-              style={{ height: "64px" }}
-            />
-            <Input
-              errorMessage="Please enter city name"
-              label="Town/City"
-              labelPlacement="outside"
-              name="town"
-              placeholder="Enter your city name"
-              type="text"
-              value={town}
-              onValueChange={setTown}
-              className="w-full sm:w-[490px] lg:w-[490px] max-w-full py-3"
-              style={{ height: "64px" }}
-            />
-            <Input
-              errorMessage="Please enter country name"
-              label="State/Country"
-              labelPlacement="outside"
-              name="country"
-              placeholder="Enter your country"
-              type="text"
-              value={country}
-              onValueChange={setCountry}
-              className="w-full sm:w-[490px] lg:w-[490px] max-w-full py-3"
-              style={{ height: "64px" }}
-            />
-            <Input
-              errorMessage="Please enter post code"
-              label="Postal Code"
-              labelPlacement="outside"
-              name="postCode"
-              placeholder="Enter your post code"
-              type="text"
-              value={postCode}
-              onValueChange={setPostCode}
-              className="w-full sm:w-[490px] lg:w-[490px] max-w-full py-3"
-              style={{ height: "64px" }}
-            />
-          </form>
-
-          <div className="px-5 w-full flex flex-col sm:flex-row gap-5 mt-10">
-            <button className="bg-black py-[14px] text-[16px] text-white font-semibold rounded-[36px] w-full sm:w-[48%] mb-5 sm:mr-2">
-              Edit Profile
-            </button>
-            <button className="bg-white py-[14px] text-[16px] text-black font-semibold rounded-[36px] w-full sm:w-[48%] mb-5 sm:ml-2">
-              Delete Account
-            </button>
+        <CommonSpace>
+          <div className="max-w-5xl mx-auto bg-custom-gradient rounded-3xl font-Geist">
+            <div className="text-3xl font-semibold pt-12 text-center">
+              <h2>Personal Info</h2>
+            </div>
+            <Form
+              className="w-full  grid grid-cols-2 gap-6  text-xl p-16 "
+              validationBehavior="native"
+              onSubmit={onSubmit}
+            >
+              <Input
+                classNames={{
+                  label: "text-lg font-medium",
+                  inputWrapper:
+                    "!bg-white py-6  rounded-2xl ring-1 ring-[#D9D9D9] ",
+                  input: "text-lg",
+                }}
+                className="bg-transparent "
+                isRequired
+                errorMessage="Please enter a valid email"
+                label="First Name"
+                labelPlacement="outside"
+                name="email"
+                placeholder="Enter your email"
+                type="text"
+              />
+              <Input
+                classNames={{
+                  label: "text-lg font-medium",
+                  inputWrapper:
+                    "!bg-white py-6  rounded-2xl ring-1 ring-[#D9D9D9] ",
+                  input: "text-lg",
+                }}
+                isRequired
+                errorMessage="Please enter a valid email"
+                label="Last Name"
+                labelPlacement="outside"
+                name="email"
+                placeholder="Enter your email"
+                type="text"
+              />
+              <Input
+                classNames={{
+                  label: "text-lg font-medium",
+                  inputWrapper:
+                    "!bg-white py-6  rounded-2xl ring-1 ring-[#D9D9D9] ",
+                  input: "text-lg",
+                }}
+                isRequired
+                errorMessage="Please enter a valid email"
+                label="Last Name"
+                labelPlacement="outside"
+                name="email"
+                placeholder="Enter your email"
+                type="text"
+              />
+              <Input
+                classNames={{
+                  label: "text-lg font-medium",
+                  inputWrapper:
+                    "!bg-white py-6  rounded-2xl ring-1 ring-[#D9D9D9] ",
+                  input: "text-lg",
+                }}
+                isRequired
+                errorMessage="Please enter a valid email"
+                label="Email"
+                labelPlacement="outside"
+                name="email"
+                placeholder="Enter your email"
+                type="email"
+              />
+              <Input
+                classNames={{
+                  label: "text-lg font-medium",
+                  inputWrapper:
+                    "!bg-white py-6  rounded-2xl ring-1 ring-[#D9D9D9] ",
+                  input: "text-lg",
+                }}
+                isRequired
+                errorMessage="Please enter a valid email"
+                label="Phone Number"
+                labelPlacement="outside"
+                name="email"
+                placeholder="Enter your email"
+                type="text"
+              />
+              <Input
+                classNames={{
+                  label: "text-lg font-medium",
+                  inputWrapper:
+                    "!bg-white py-6  rounded-2xl ring-1 ring-[#D9D9D9] ",
+                  input: "text-lg",
+                }}
+                isRequired
+                errorMessage="Please enter a valid email"
+                label=" Address"
+                labelPlacement="outside"
+                name="email"
+                placeholder="Enter your email"
+                type="text"
+              />
+              <Select
+                classNames={{
+                  trigger: "bg-white py-6",
+                  label: "text-lg font-medium",
+                }}
+                label="Select an animal"
+                labelPlacement="outside"
+                placeholder="Country Name"
+              >
+                {animals.map((animal) => (
+                  <SelectItem key={animal.key}>{animal.label}</SelectItem>
+                ))}
+              </Select>
+              <Input
+                classNames={{
+                  label: "text-lg font-medium",
+                  inputWrapper:
+                    "!bg-white py-6  rounded-2xl ring-1 ring-[#D9D9D9] ",
+                  input: "text-lg",
+                }}
+                isRequired
+                errorMessage="Please enter a valid email"
+                label="Postal Code"
+                labelPlacement="outside"
+                name="email"
+                placeholder="Enter your email"
+                type="text"
+              />
+              <button className="bg-[#050505] text-white py-2 rounded-3xl">
+                Edit Profile
+              </button>
+              <button className="ring-1 bg-white ring-[#050505] py-2 rounded-3xl text-[#050505]">
+                Delete Account
+              </button>
+            </Form>
           </div>
-        </div>
+        </CommonSpace>
       </CommonWrapper>
     </>
   );
