@@ -7,6 +7,7 @@ import menu from "../assets/images/menu.png";
 import woman from "../assets/images/woman.png";
 import { useState } from "react";
 import MobileMenu from "../components/MobileMenu";
+import { Link } from "react-router-dom";
 export default function Header() {
   const [show, setShow] = useState(false);
   return (
@@ -20,9 +21,12 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-4">
-          <span className="text-2xl p-3 bg-white rounded-full cursor-pointer">
+          <Link
+            to="/wishlist"
+            className="text-2xl p-3 bg-white rounded-full cursor-pointer"
+          >
             <FaRegHeart />
-          </span>
+          </Link>
           <span className="text-2xl p-3 bg-white rounded-full cursor-pointer">
             <PiShoppingCartThin />
           </span>

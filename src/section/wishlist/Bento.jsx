@@ -5,7 +5,7 @@ import cart from "../../assets/images/cart.png";
 import bento3 from "../../assets/images/bento3.png";
 const Bento = () => {
   return (
-    <div className="h-full bg-white font-geist flex  flex-col items-center  rounded-2xl relative cursor-pointer group p-4 ">
+    <div className="w-full h-full bg-white font-geist flex  flex-col items-center  rounded-2xl relative cursor-pointer group p-4 ">
       <div className="flex justify-between items-center  w-full ">
         <div className="text-[#050505] text-xl font-Geist">
           <h2 className="text-2xl">Product Name</h2>
