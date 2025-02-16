@@ -1,13 +1,12 @@
 import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
-const CommonButton = ({ title }) => {
+const CommonButton = ({ title, icon }) => {
   return (
-    <div className="absolute z-30 flex items-center invisible text-white transition-all top-1/2 group-hover:visible">
-      <button className="bg-[#050505] px-10 py-3 rounded-full font-medium ">
+    <div className="flex items-center justify-center">
+      <button className="bg-[#050505] px-10 py-3 rounded-full font-medium text-white">
         {title}
       </button>
-      <button className="bg-[#050505] rounded-full p-4 text-lg ">
-        <FiArrowUpRight />
+      <button className="bg-[#050505] rounded-full p-4 text-xl text-white ">
+        {icon}
       </button>
     </div>
   );

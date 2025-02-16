@@ -5,19 +5,13 @@ import Card from "../section/home/Card";
 import CommonSpace from "../components/CommonSpace";
 import Bento from "../section/wishlist/Bento";
 import BigBento from "../section/wishlist/BigBento";
+import BentoSecond from "../section/wishlist/BentoSecond";
+import BentoFirst from "../section/wishlist/BentoFirst";
+import CommonButton from "../components/CommonButton";
+import NewsLetter from "../components/NewsLetter";
+import { LiaShareAltSolid } from "react-icons/lia";
 
 const Wishlist = () => {
-  // Example wishlist data
-  const wishlistItems = [
-    { id: 1, name: "Item 1", price: "$100", image: "image1.jpg", spanRows: 2 },
-    { id: 2, name: "Item 2", price: "$150", image: "image2.jpg", spanRows: 1 },
-    { id: 3, name: "Item 3", price: "$200", image: "image3.jpg", spanRows: 1 },
-    { id: 4, name: "Item 4", price: "$120", image: "image4.jpg", spanRows: 1 },
-    { id: 5, name: "Item 5", price: "$180", image: "image5.jpg", spanRows: 1 },
-    { id: 6, name: "Item 6", price: "$220", image: "image6.jpg", spanRows: 2 },
-  ];
-
-  //"linear-gradient(98deg, #F1FBFF 0%, #F1EDEB 49.68%, #F8DAB0 95.53%)
   return (
     <>
       <CommonWrapper>
@@ -31,23 +25,20 @@ const Wishlist = () => {
       </CommonWrapper>
       <CommonWrapper>
         <CommonSpace>
-          <div className="p-4 rounded-xl bg-custom-gradient">
-            <div className="p-4 ">
-              <div className="flex flex-col sm:flex-row items-stretch  justify-center gap-6 ">
-                <div className=" flex-1 rounded-xl">
-                  <BigBento />
-                </div>
-                <div className=" flex-1 flex flex-col gap-6">
-                  <div className="rounded-xl">
-                    <Bento />
-                  </div>
-                  <div className=" rounded-xl">
-                    <Bento />
-                  </div>
-                </div>
-              </div>
+          <div className="w-full p-4 rounded-xl bg-custom-gradient">
+            <div className="w-full p-4 flex flex-col gap-6 ">
+              <BentoFirst />
+              <BentoSecond />
+              <BentoFirst />
+              <BentoSecond />
             </div>
           </div>
+        </CommonSpace>
+
+        <CommonButton title="Share Closet" icon={<LiaShareAltSolid />} />
+
+        <CommonSpace>
+          <NewsLetter />
         </CommonSpace>
       </CommonWrapper>
     </>
