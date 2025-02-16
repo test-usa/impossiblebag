@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import ProductDetailsBag from "/ProductDetailsBag.png";
 import { ShoppingCart, StarIcon } from "lucide-react";
+import SmallBag from "/SmallBag.png";
+import CommonButton from "../../components/CommonButton";
+
+const bags = [SmallBag, SmallBag, SmallBag, SmallBag];
 
 const products = [
   {
@@ -36,94 +40,102 @@ const ProductInfo = () => {
   const [quantity, setQuantity] = useState(1);
   return (
     <div>
-      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-x-32 max-w-7xl mx-auto p-6 ">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-7 max-w-[1320px] mx-auto p-6 ">
         {/* Left Image Section */}
-        <div className="w-full lg:w-1/2 flex justify-center">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <img
             src={ProductDetailsBag}
             alt="Nutrition Hydroxy"
-            className="max-w-full h-auto object-contain"
+            className="max-w-[600px] h-auto object-contain"
           />
+          <div className="max-w-[600px] hidden lg:flex lg:justify-center space-x-5 mt-7">
+            {bags.map((img) => (
+              <img className="w-[135px] h-auto" src={img} alt="" />
+            ))}
+          </div>
         </div>
 
         {/* Right Product Info Section */}
         <div className=" max-w-xl">
-      {/* Product Name and Rating */}
-     <div className="flex justify-start items-center gap-5 pb-4">
-     <h2 className="text-xl font-semibold">{products[0].name}</h2>
-      <div className="flex items-center space-x-2 mt-1">
-        <div className="flex text-yellow-500">
-          ★★★★★
+          {/* Product Name and Rating */}
+          <div className="flex justify-start items-center gap-5 pb-4">
+            <h2 className="text-xl font-semibold">{products[0].name}</h2>
+            <div className="flex items-center space-x-2 mt-1">
+              <div className="flex text-yellow-500">★★★★★</div>
+              <span className="text-gray-500 text-sm">(4.5/5.0)</span>
+            </div>
+          </div>
+          <hr />
+
+          {/* Description */}
+          <p className="text-gray-600 mt-3 py-4">
+            Lorem Ipsum Dolor Sit Amet Consectetur. Odio Lorem Erat Non Purus
+            Pellentesque Diam Quis. Placerat Volutpat Massa Quam Quis.
+            Adipiscing A Dignissim Velit Nunc. Eu Vel Consectetur Lorem Lectus
+            Imperdiet.
+          </p>
+
+          {/* Product Info */}
+          <div className="mt-4 space-y-2">
+            <p>
+              <span className="font-semibold">Brand:</span> Fendi
+            </p>
+            <p>
+              <span className="font-semibold">Product Code:</span> ER4325T
+            </p>
+            <p>
+              <span className="font-semibold">Availability:</span>{" "}
+              <span className="text-green-600">In stock</span>
+            </p>
+          </div>
+
+          {/* Color Options */}
+          <div className="mt-4 flex items-center gap-5">
+            <p className="font-semibold">Color:</p>
+            <div className="flex items-center space-x-2 mt-1">
+              <div className="w-6 h-6 rounded-full bg-[#7c5b34] border"></div>
+              <div className="w-6 h-6 rounded-full bg-[#252525] border"></div>
+              <div className="w-6 h-6 rounded-full bg-[#1b3d23] border"></div>
+            </div>
+          </div>
+
+          {/* Price */}
+          <div className="mt-4">
+            <span className="text-2xl font-bold">$120.00</span>
+            <span className="text-gray-500 line-through ml-2">$150.00</span>
+          </div>
+
+          {/* Quantity Selector & Cart Button */}
+          <div className="flex items-center mt-4 space-x-4">
+            {/* Quantity */}
+            <div className="flex items-center border rounded">
+              <button
+                className="px-3 py-2 bg-[#E5E5E5] text-gray-500  disabled:opacity-50"
+                onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                disabled={quantity <= 1}
+              >
+                -
+              </button>
+              <span className="mx-4 bg-white">{quantity}</span>
+              <button
+                className="px-3 py-2 bg-[#E5E5E5] text-gray-500"
+                onClick={() => setQuantity(quantity + 1)}
+              >
+                +
+              </button>
+            </div>
+
+            {/* Add to Cart Button */}
+            <div className="flex items-center text-white transition-all top-1/2 group-hover:visible">
+              <button className="bg-[#050505] px-10 py-3 rounded-full font-medium ">
+                Add To Cart
+              </button>
+              <button className="bg-[#050505] rounded-full p-4 text-lg ">
+                <ShoppingCart className="" size={20} />
+              </button>
+            </div>
+          </div>
         </div>
-        <span className="text-gray-500 text-sm">(4.5/5.0)</span>
-      </div>
-     </div>
-     <hr />
-
-      {/* Description */}
-      <p className="text-gray-600 mt-3 py-4">
-        Lorem Ipsum Dolor Sit Amet Consectetur. Odio Lorem Erat Non Purus
-        Pellentesque Diam Quis. Placerat Volutpat Massa Quam Quis. Adipiscing A
-        Dignissim Velit Nunc. Eu Vel Consectetur Lorem Lectus Imperdiet.
-      </p>
-
-      {/* Product Info */}
-      <div className="mt-4 space-y-2">
-        <p>
-          <span className="font-semibold">Brand:</span> Fendi
-        </p>
-        <p>
-          <span className="font-semibold">Product Code:</span> ER4325T
-        </p>
-        <p>
-          <span className="font-semibold">Availability:</span>{" "}
-          <span className="text-green-600">In stock</span>
-        </p>
-      </div>
-
-      {/* Color Options */}
-      <div className="mt-4 flex items-center gap-5">
-        <p className="font-semibold">Color:</p>
-        <div className="flex items-center space-x-2 mt-1">
-          <div className="w-6 h-6 rounded-full bg-[#7c5b34] border"></div>
-          <div className="w-6 h-6 rounded-full bg-[#252525] border"></div>
-          <div className="w-6 h-6 rounded-full bg-[#1b3d23] border"></div>
-        </div>
-      </div>
-
-      {/* Price */}
-      <div className="mt-4">
-        <span className="text-2xl font-bold">$120.00</span>
-        <span className="text-gray-500 line-through ml-2">$150.00</span>
-      </div>
-
-      {/* Quantity Selector & Cart Button */}
-      <div className="flex items-center mt-4 space-x-4">
-        {/* Quantity */}
-        <div className="flex items-center border rounded">
-          <button
-            className="px-3 py-2 bg-[#E5E5E5] text-gray-500  disabled:opacity-50"
-            onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-            disabled={quantity <= 1}
-          >
-            -
-          </button>
-          <span className="mx-4 bg-white">{quantity}</span>
-          <button
-            className="px-3 py-2 bg-[#E5E5E5] text-gray-500"
-            onClick={() => setQuantity(quantity + 1)}
-          >
-            +
-          </button>
-        </div>
-
-        {/* Add to Cart Button */}
-        <button className="flex items-center bg-black text-white px-6 py-2 rounded-full">
-          Add To Cart
-          <ShoppingCart className="ml-2" size={20} />
-        </button>
-      </div>
-    </div>
       </div>
     </div>
   );
