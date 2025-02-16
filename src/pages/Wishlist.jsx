@@ -31,8 +31,8 @@ const Wishlist = () => {
       </CommonWrapper>
       <CommonWrapper>
         <CommonSpace>
-          <div className="p-4 rounded-xl bg-custom-gradient">
-            <div className="p-4 ">
+          <div className="w-full p-4 rounded-xl bg-custom-gradient">
+            <div className="w-full p-4 flex flex-col gap-6 ">
               <div className="flex flex-col sm:flex-row items-stretch  justify-center gap-6 ">
                 <div className=" flex-1 rounded-xl">
                   <BigBento />
@@ -45,6 +45,11 @@ const Wishlist = () => {
                     <Bento />
                   </div>
                 </div>
+              </div>
+              <div className="w-full flex items-center  gap-6">
+                <Bento />
+                <Bento />
+                <Bento />
               </div>
             </div>
           </div>
