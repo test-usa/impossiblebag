@@ -16,7 +16,7 @@ export default function Header() {
         <div onClick={() => setShow(true)}>
           <img className=" cursor-pointer" src={menu} alt="" />
         </div>
-        <div className=" hidden sm:block max-w-52  max-h-28">
+        <div className=" hidden sm:block max-w-52  max-h-28 sm:ml-32">
           <img className=" w-full h-full" src={headerLogo} alt="" />
         </div>
 
@@ -30,13 +30,13 @@ export default function Header() {
           <span className="text-2xl p-3 bg-white rounded-full cursor-pointer">
             <PiShoppingCartThin />
           </span>
-          <div className="flex items-center cursor-pointer">
+          <Link to="/profile" className="flex items-center cursor-pointer">
             <img className="w-12 h-12 rounded-full" src={woman} alt="" />
             <p className="text-xs">
               Hi, <br />
               Dana Keeling!
             </p>
-          </div>
+          </Link>
         </div>
       </div>
       {show && <MobileMenu setShow={setShow} />}
