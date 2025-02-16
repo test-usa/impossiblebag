@@ -1,6 +1,6 @@
 import React from "react";
-import CommonHeader from "../components/CommonHeader";
-import Header from "../layout/Header";
+import CommonHeader from "../components/CommonHeader.jsx";
+import Header from "../layout/Header.jsx";
 const Checkout = () => {
   return (
     <>

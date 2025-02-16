@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import ProductDetailsBag from "/ProductDetailsBag.png";
-import { ShoppingCart, StarIcon } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import SmallBag from "/SmallBag.png";
-import CommonButton from "../../components/CommonButton";
 
 const bags = [SmallBag, SmallBag, SmallBag, SmallBag];
 
