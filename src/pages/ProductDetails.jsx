@@ -22,7 +22,9 @@ const ProductDetails = () => {
         <RelatedProducts />
       </CommonSpace>
       <CommonWrapper>
-        <NewsLetter />
+        <div className="py-20">
+          <NewsLetter />
+        </div>
       </CommonWrapper>
     </div>
   );
