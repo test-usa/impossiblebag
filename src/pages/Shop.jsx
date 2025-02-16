@@ -1,14 +1,14 @@
 import React from "react";
-import CommonWrapper from "../components/CommonWrapper";
-import Filter from "../section/shop/Filter";
-import Sort from "../section/shop/Sort";
-import ShoppingCart from "../section/shop/ShoppingCart";
-import CustomPagination from "../section/shop/CustomPagination";
-import CommonSpace from "../components/CommonSpace";
-import NewsLetter from "../components/NewsLetter";
-import SapceBottom from "../components/SapceBottom";
-import Header from "../layout/Header";
-import CommonHeader from "../components/CommonHeader";
+import CommonWrapper from "../components/CommonWrapper.jsx";
+import Filter from "../section/shop/Filter.jsx";
+import Sort from "../section/shop/Sort.jsx";
+import ShoppingCart from "../section/shop/ShoppingCart.jsx";
+import CustomPagination from "../section/shop/CustomPagination.jsx";
+import CommonSpace from "../components/CommonSpace.jsx";
+import NewsLetter from "../components/NewsLetter.jsx";
+import SapceBottom from "../components/SapceBottom.jsx";
+import Header from "../layout/Header.jsx";
+import CommonHeader from "../components/CommonHeader.jsx";
 
 const Shop = () => {
   const list = new Array(20).fill(null);

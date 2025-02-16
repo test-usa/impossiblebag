@@ -1,5 +1,5 @@
 import React from "react";
-import Bento from "./Bento";
+import Bento from "./Bento.jsx";
 
 const BentoSecond = () => {
   const list = new Array(3).fill(null);

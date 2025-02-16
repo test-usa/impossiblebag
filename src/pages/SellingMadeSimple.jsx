@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import CommonWrapper from "../components/CommonWrapper";
+import CommonWrapper from "../components/CommonWrapper.jsx";
 import { Input } from "@heroui/react";
 import frame from "../assets/images/Frame.svg";
-import Header from "../layout/Header";
-import CommonHeader from "../components/CommonHeader";
+import Header from "../layout/Header.jsx";
+import CommonHeader from "../components/CommonHeader.jsx";
 
 const SellingMadeSimple = () => {
   const [designer, setDesigner] = useState("");
   const [category, setCategory] = useState("");
   const [product, setProduct] = useState("");
   const [productDetails, setProductDetails] = useState("");
-
-  const [submitted, setSubmitted] = useState(null);
 
   const onSubmit = (e) => {
     e.preventDefault();

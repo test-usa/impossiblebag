@@ -1,7 +1,7 @@
 import React from "react";
 import { Checkbox } from "@heroui/checkbox";
-import Divider from "./Divider";
-import MediumHeader from "./MediumHeader";
+import Divider from "./Divider.jsx";
+import MediumHeader from "./MediumHeader.jsx";
 const bagType = [
   "Handbags",
   "Crossbody",

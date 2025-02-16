@@ -1,15 +1,15 @@
 import React from "react";
-import Hero from "../section/Home/Hero";
-import CommonWrapper from "../components/CommonWrapper";
+import Hero from "../section/Home/Hero.jsx";
+import CommonWrapper from "../components/CommonWrapper.jsx";
 
-import CommonExclusiveCard from "../components/CommonExclusiveCard";
-import CollectionList from "../section/home/CollectionList";
-import Support from "../section/home/Support";
-import NewsLetter from "../components/NewsLetter";
-import BestSelling from "../section/home/BestSelling";
-import BestBag from "../section/home/BestBag";
-import Gallery from "../section/home/Gallery";
-import CommonSpace from "../components/CommonSpace";
+import CommonExclusiveCard from "../components/CommonExclusiveCard.jsx";
+import CollectionList from "../section/home/CollectionList.jsx";
+import Support from "../section/home/Support.jsx";
+import NewsLetter from "../components/NewsLetter.jsx";
+import BestSelling from "../section/home/BestSelling.jsx";
+import BestBag from "../section/home/BestBag.jsx";
+import Gallery from "../section/home/Gallery.jsx";
+import CommonSpace from "../components/CommonSpace.jsx";
 import Card from "../section/home/Card.jsx";
 import Tab from "../section/home/Tab.jsx";
 const list = new Array(9).fill(null);

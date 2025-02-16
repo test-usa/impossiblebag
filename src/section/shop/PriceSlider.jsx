@@ -1,5 +1,5 @@
 import React from "react";
-import MediumHeader from "./MediumHeader";
+import MediumHeader from "./MediumHeader.jsx";
 import { Slider, Input } from "@heroui/react";
 
 const PriceSlider = () => {

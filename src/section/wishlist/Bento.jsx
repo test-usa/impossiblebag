@@ -1,5 +1,4 @@
 import React from "react";
-import bag from "../../assets/images/bag.png";
 import { IoMdHeart } from "react-icons/io";
 import cart from "../../assets/images/cart.png";
 import bento3 from "../../assets/images/bento3.png";

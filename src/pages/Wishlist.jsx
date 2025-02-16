@@ -1,13 +1,13 @@
 import React from "react";
-import CommonWrapper from "../components/CommonWrapper";
-import Header from "../layout/Header";
-import CommonSpace from "../components/CommonSpace";
-import BentoSecond from "../section/wishlist/BentoSecond";
-import BentoFirst from "../section/wishlist/BentoFirst";
-import CommonButton from "../components/CommonButton";
-import NewsLetter from "../components/NewsLetter";
+import CommonWrapper from "../components/CommonWrapper.jsx";
+import Header from "../layout/Header.jsx";
+import CommonSpace from "../components/CommonSpace.jsx";
+import BentoSecond from "../section/wishlist/BentoSecond.jsx";
+import BentoFirst from "../section/wishlist/BentoFirst.jsx";
+import CommonButton from "../components/CommonButton.jsx";
+import NewsLetter from "../components/NewsLetter.jsx";
 import { LiaShareAltSolid } from "react-icons/lia";
-import WishDelete from "../section/wishlist/WishDelete";
+import WishDelete from "../section/wishlist/WishDelete.jsx";
 
 const Wishlist = () => {
   return (
