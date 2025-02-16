@@ -1,11 +1,11 @@
 import React from "react";
-import CommonHeader from "../components/CommonHeader";
-import CommonWrapper from "../components/CommonWrapper";
-import ProductInfo from "../section/ProductDetails/ProductInfo";
-import RelatedProducts from "../section/ProductDetails/RelatedProducts";
-import TabSwitch from "../section/ProductDetails/TabSwitch";
-import CommonSpace from "../components/CommonSpace";
-import NewsLetter from "../components/NewsLetter";
+import CommonHeader from "../components/CommonHeader.jsx";
+import CommonWrapper from "../components/CommonWrapper.jsx";
+import ProductInfo from "../section/ProductDetails/ProductInfo.jsx";
+import RelatedProducts from "../section/ProductDetails/RelatedProducts.jsx";
+import TabSwitch from "../section/ProductDetails/TabSwitch.jsx";
+import CommonSpace from "../components/CommonSpace.jsx";
+import NewsLetter from "../components/NewsLetter.jsx";
 
 const ProductDetails = () => {
   return (
