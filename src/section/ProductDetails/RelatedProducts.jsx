@@ -9,14 +9,14 @@ const RelatedProducts = () => {
 
     {/* Related Products Section */}
     <h2 className=" text-2xl font-bold">Related Product</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 place-items-center cursor-pointer">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  mt-6   cursor-pointer">
       {[1, 2, 3, 4].map((item) => (
-        <div key={item} className="">
+        <div key={item} className="w-[350px]">
           <div className="relative p-4">
             <img
               src={SmallBag} // Replace with actual image path
               alt="Product"
-              className="w-64 h-[275px] object-cover rounded-[24px]"
+              className="w-72 h-[295px] object-cover rounded-[24px]"
             />
           </div>
           <div className="p-4">

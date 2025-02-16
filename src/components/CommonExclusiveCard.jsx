@@ -1,7 +1,7 @@
 import React from "react";
-import ExclusiveImg from "/public/ExclusiveImg.jpg";
+
 import CommonWrapper from "./CommonWrapper";
-import RightTopArrow from "/public/RightTopArrow.png";
+import RightTopArrow from "/RightTopArrow.png";
 import CommonButton from "./CommonButton";
 const CommonExclusiveCard = () => {
   return (
