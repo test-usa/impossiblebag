@@ -10,6 +10,7 @@ import BentoFirst from "../section/wishlist/BentoFirst";
 import CommonButton from "../components/CommonButton";
 import NewsLetter from "../components/NewsLetter";
 import { LiaShareAltSolid } from "react-icons/lia";
+import WishDelete from "../section/wishlist/WishDelete";
 
 const Wishlist = () => {
   return (
@@ -34,8 +35,10 @@ const Wishlist = () => {
             </div>
           </div>
         </CommonSpace>
-
-        <CommonButton title="Share Closet" icon={<LiaShareAltSolid />} />
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+          <CommonButton title="Share Closet" icon={<LiaShareAltSolid />} />
+          <WishDelete />
+        </div>
 
         <CommonSpace>
           <NewsLetter />
