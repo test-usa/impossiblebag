@@ -1,11 +1,10 @@
 import React from "react";
-import bag from "../../assets/images/bag.png";
 import { IoMdHeart } from "react-icons/io";
 import cart from "../../assets/images/cart.png";
-import bento3 from "../../assets/images/bento3.png";
-const Bento = () => {
+import bento1 from "../../assets/images/bento1.png";
+const BigBento = () => {
   return (
-    <div className="h-full bg-white font-geist flex  flex-col items-center  rounded-2xl relative cursor-pointer group p-4 ">
+    <div className="h-full bg-white font-geist flex  flex-col items-center  rounded-2xl relative cursor-pointer group gap-5 sm:gap-20 p-4 ">
       <div className="flex justify-between items-center  w-full ">
         <div className="text-[#050505] text-xl font-Geist">
           <h2 className="text-2xl">Product Name</h2>
@@ -25,11 +24,11 @@ const Bento = () => {
         </div>
       </div>
 
-      <div className="max-h-64 max-w-64">
-        <img className="w-full h-full " src={bento3} alt="bang" />
+      <div className="">
+        <img className="w-full h-full " src={bento1} alt="bang" />
       </div>
     </div>
   );
 };
 
-export default Bento;
+export default BigBento;
